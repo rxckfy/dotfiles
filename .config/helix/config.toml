@@ -1,0 +1,23 @@
+theme = "jetbrains_dark"
+
+[editor]
+auto-save = true
+auto-format = true
+cursorcolumn = true
+cursorline = true
+mouse = true
+rulers = [80]
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+
+[keys.normal]
+# esc is remapped to capslock locally
+esc = ["collapse_selection", "keep_primary_selection", ":w"]
+
+[keys.insert]
+"C-space" = "completion"

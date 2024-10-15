@@ -1,0 +1,61 @@
+[language-server]
+emmet-ls = { command = "emmet-ls", args = [ "--stdio" ]}
+
+#---------------------------------------------------------------------------------------------------------
+
+[[language]]
+name = "javascript"
+language-servers = [
+  { name = 'typescript-language-server', except-features = ['format'] }
+]
+auto-format = true
+
+#---------------------------------------------------------------------------------------------------------
+
+[[language]]
+name = "typescript"
+language-servers = [
+  { name = 'typescript-language-server' }
+]
+auto-format = true
+
+#---------------------------------------------------------------------------------------------------------
+
+[[language]]
+name = "jsx"
+language-servers = [
+  { name = 'emmet-ls' },
+  { name = 'typescript-language-server' }
+]
+auto-format = true
+
+#---------------------------------------------------------------------------------------------------------
+
+[[language]]
+name = "tsx"
+language-servers = [
+  { name = 'emmet-ls' },
+  { name = 'typescript-language-server' }
+]
+auto-format = true
+
+#---------------------------------------------------------------------------------------------------------
+
+[[language]]
+name = "html"
+roots = [".git"]
+language-servers = ["emmet-lsp"]
+
+#---------------------------------------------------------------------------------------------------------
+
+[[language]]
+name = "json"
+language-servers = ["vscode-json-language-server"]
+formatter = { command = 'prettier', args = ["--parser", "json"] }
+auto-format = true
+
+#---------------------------------------------------------------------------------------------------------
+
+[[language]]
+name = "lua"
+auto-format = true

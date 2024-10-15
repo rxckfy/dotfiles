@@ -1,0 +1,18 @@
+pkg update
+pkg upgrade --yes
+pkg install git fish nodejs python clang rust fzf yazi neovim gh ripgrep fd helix helix-grammars wget curl golang --yes
+pkg install termux-api --yes 
+
+cargo install --git https://github.com/angelofallars/treefetch
+fish_add_path $HOME/.cargo/bin/
+fish_add_path $HOME/.local/bin/
+
+cd
+
+git clone https://github.com/notflawffles/termux-nerd-installer.git
+cd termux-nerd-installer
+make install
+
+cd 
+
+rm -rf termux-nerd-installer
